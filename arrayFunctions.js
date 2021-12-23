@@ -10,7 +10,10 @@
  */
 function isArrayLengthOdd(numbers) {
   // Your code here
+ return numbers.length %2 !=0
+
 }
+console.log(isArrayLengthOdd([1,2,3,4,]));
 
 /**
  * isArrayLengthEven(numbers):
@@ -24,7 +27,9 @@ function isArrayLengthOdd(numbers) {
  */
 function isArrayLengthEven(numbers) {
   // Your code here
+  return !isArrayLengthOdd(numbers)
 }
+console.log(isArrayLengthEven([1,2,3]));
 
 /**
  * addLailaToArray(instructors):
@@ -36,7 +41,14 @@ function isArrayLengthEven(numbers) {
  */
 function addLailaToArray(instructors) {
   // Your code here
+// i will make a copy of instructors
+//i will add laila
+//i will return it
+return instructors.push("Laila");
+
 }
+
+console.log(addLailaToArray(["mashary", "hasan"]));
 
 /**
  * eliminateTeam(teams):
@@ -48,8 +60,10 @@ function addLailaToArray(instructors) {
  */
 function eliminateTeam(teams) {
   // Your code here
-}
+teams.pop();
 
+}
+console.log(teams);
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
  * - receives array `fruits`
@@ -62,7 +76,17 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
+  //if it even
+  //return the second half of the array
+  //if odd 
+//return empty arry
+if (isArrayLengthEven(fruits))
+return fruits.splice(fruits.length/2)
+else return []
+  
 }
+
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]));
 
 /**
  * youGottaCalmDown(shout):
@@ -80,7 +104,17 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
+  //check if is there !!!mark
+  //remove them but keep one
+  // no ! return shout
+  /**while (shout.indexOf("!!") !=- 1){
+    shout = shout.slice(0,-1 )
+  }
+  return shout;*/
+  return shout.slice(0, shout ,indexOf("!") +1);
+
 }
+console.log(youGottaCalmDown("HI!!!!!!!"));
 
 module.exports = {
   isArrayLengthOdd,
